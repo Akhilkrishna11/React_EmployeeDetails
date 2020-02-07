@@ -4,12 +4,10 @@ import App from './App';
 import LoginForm from './LoginForm';
 
 const routes= (
-  <Router>
-    <Router >
-       <Route exactpath = "/" component = {LoginForm}>
-          <Route path = "/home" exact component = {LoginForm} />
-          <Route path = "/employeeList" exact component = {App} />
-       </Route>
+    <Router>
+    <Router>
+      <Route path="/" exact={true} component={LoginForm}/>
+      <Route path="/employeeList" exact={true} component={App}/>
     </Router>
   </Router>
 );

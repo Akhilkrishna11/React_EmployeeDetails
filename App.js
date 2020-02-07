@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 
-
 const data = {
   "user": [
     {
@@ -59,9 +58,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="table">
         <table>
-          <tr>
+          <tr className="tr">
             <th>Id</th>
             <th>Name</th>
             <th>Age</th>
@@ -70,16 +69,16 @@ class App extends React.Component {
             <th>Phone No</th>
           </tr>
           {
-            data.user.map(x => 
-              <tr>
-              <td>{x.id}</td>
-              <td>{x.name}</td>
-              <td>{x.age}</td>
-              <td>{x.gender}</td>
-              <td>{x.email}</td>
-              <td>{x.phoneNo}</td>
-            </tr>
-              )
+            data.user.map(x =>
+              <tr className="tr">
+                <td>{x.id}</td>
+                <td>{x.name}</td>
+                <td>{x.age}</td>
+                <td>{x.gender}</td>
+                <td>{x.email}</td>
+                <td>{x.phoneNo}</td>
+              </tr>
+            )
           }
         </table>
       </div>
